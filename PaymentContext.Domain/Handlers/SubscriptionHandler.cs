@@ -60,6 +60,10 @@ namespace PaymentContext.Domain.Handlers
             // agrupar as validações
             AddNotifications(name, document, email, address, student, subscription, payment);
 
+            // Checar as notificações
+            if (!IsValid)
+                return new CommandResult(false, "Não foi possível realizar sua assinatura");
+
             // Salvar as informações
             _studentRepository.CreateSubscription(student);
 
