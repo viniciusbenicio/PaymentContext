@@ -18,7 +18,7 @@ namespace PaymentContext.Domain.Entities
             Address = address;
             Email = email;
 
-            AddNotifications(new Contract<Payment>().Requires().IsGreaterThan(0, Total, "Payment.Total", "Não pode ser zero")
+            AddNotifications(new Contract<Payment>().Requires().IsLowerOrEqualsThan(0, Total, "Payment.Total", "Não pode ser zero")
                                                                .IsGreaterOrEqualsThan(Total, TotalPaid, "Payment.TotalPaid", "O valor pago é menor que o valor do pagamento")
                                                                );
         }
