@@ -23,8 +23,6 @@ public class StudentTests
         _address = new Address("Av. Brig. Faria Lima", "3477", "Itaim Bibi", "São Paulo", "SP", "BR", "04538133");
         _student = new Student(_name, _document, _email);
         _subscription = new Subscription(null);
-
-
     }
 
     [TestMethod]
