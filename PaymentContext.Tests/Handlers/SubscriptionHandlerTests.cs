@@ -39,7 +39,7 @@ namespace PaymentContext.Tests.Handlers
             command.ZipCode = "98218912893123";
 
             handler.Handle(command);
-            Assert.AreEqual(false, command.IsValid);
+            Assert.AreEqual(false, handler.IsValid);
 
 
         }
