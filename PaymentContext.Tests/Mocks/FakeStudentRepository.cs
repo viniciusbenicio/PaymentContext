@@ -3,7 +3,7 @@ using PaymentContext.Domain.Repositories;
 
 namespace PaymentContext.Tests.Mocks
 {
-    public class FakeStudentRepository : IStudentRepository
+    public class StudentQueriesTests : IStudentRepository
     {
         public void CreateSubscription(Student student) { }
 

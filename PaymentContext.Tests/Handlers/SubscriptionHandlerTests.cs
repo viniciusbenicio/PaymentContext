@@ -13,7 +13,7 @@ namespace PaymentContext.Tests.Handlers
         [TestMethod]
         public void ShouldReturnErrorWhenDocumentExists()
         {
-            var handler = new SubscriptionHandler(new FakeStudentRepository(), new FakeEmailServices());
+            var handler = new SubscriptionHandler(new StudentQueriesTests(), new FakeEmailServices());
             var command = new CreateBoletoSubscriptionCommand();
             command.FirstName = "Vinicius";
             command.LastName = "Benicio de Santana";
